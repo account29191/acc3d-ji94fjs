@@ -1,0 +1,208 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(247, 247, 247, 1) 25%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.headerAndNavWrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+h1 {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pastExperience,
+.missionStatement,
+.education {
+  border: solid;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  height: 16%;
+  border-radius: 5px;
+  box-shadow: 5px 10px #888888;
+}
+
+.pastExperienceParagraphHidden,
+.missionStatementParagraphHidden,
+.educationParagraphHidden {
+  display: none;
+}
+
+.pastExperienceParagraph {
+  display: grid;
+  width: 65%;
+  padding-left: 27%;
+  padding-top: 8%;
+  font-size: 20px;
+  color: blue;
+  top: 83%;
+}
+.missionStatementParagraph {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 20%;
+  font-size: 26px;
+  margin-top: -37%;
+}
+.missionStatementText {
+  background: -webkit-linear-gradient(
+    rgba(247, 247, 247, 1),
+    rgba(0, 212, 255, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.educationParagraph {
+  font-size: 20px;
+  color: blue;
+}
+
+.onHoverNav {
+  background-color: blue;
+  color: white;
+  border: solid;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  height: 16%;
+  border-radius: 5px;
+}
+
+.educationParagraph {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 20%;
+  position: absolute;
+  right: 4%;
+  top: 23%;
+}
+
+.columbusStateLogo {
+  width: 24%;
+}
+.osuLogo {
+  width: 35%;
+}
+
+.udacityLogo {
+  width: 25%;
+}
+
+.skillsChartDiv {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  width: 75%;
+  padding-left: 22.5%;
+  margin-top: -3%;
+}
+
+.funAPIs {
+  display: grid;
+  width: 20%;
+  font-size: 34px;
+  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.chuckNorrisAPI {
+  text-align: center;
+}
+
+.chuckNorrisButton,
+.gitHubButton {
+  font-size: 20px;
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+
+.funAPIs {
+  text-align: center;
+  font-size: 34px;
+  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chuckNorrisAPI,
+.gitHubAPI,
+.footballAPI {
+  text-align: center;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.chuckNorrisJokeSection,
+.gitHubRepoSection {
+  display: grid;
+  width: 20%;
+  padding-top: 2%;
+  font-size: 26px;
+  color: white;
+}
+
+.footballSection {
+  margin-top: -4%;
+}
+.footballAPIandButton {
+  display: grid;
+  width: 20%;
+  padding-top: 2%;
+  font-size: 26px;
+  color: white;
+}
+.footballAPI {
+  text-align: center;
+  font-size: 30px;
+}
+
+.footballButton {
+  font-size: 20px;
+  border-radius: 3px;
+  margin-bottom: 4%;
+  background-color: whitesmoke;
+}
+
+.footballDataHidden {
+  display: none;
+}
+
+.footballData {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: left;
+  background: grey;
+  width: 102%;
+  margin-left: -1%;
+  padding-left: 2%;
+}
+.moajaveIMGDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mojaveIMG {
+  border-radius: 15px;
+  box-shadow: 5px 5px;
+}
