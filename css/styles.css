@@ -1,208 +1,241 @@
-body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(247, 247, 247, 1) 25%,
-    rgba(0, 212, 255, 1) 100%
-  );
-}
-.headerAndNavWrapper {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-h1 {
-  font-size: 30px;
-  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-nav {
-  display: flex;
-  justify-content: space-around;
-}
+@media only screen and (min-width: 1280px) {
+  body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(247, 247, 247, 1) 25%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  .headerAndNavWrapper {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .topText {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
 
-.pastExperience,
-.missionStatement,
-.education {
-  border: solid;
-  border-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2%;
-  height: 16%;
-  border-radius: 5px;
-  box-shadow: 5px 10px #888888;
-}
+  .pastExperience,
+  .missionStatement,
+  .education {
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 16%;
+    border-radius: 5px;
+    box-shadow: 5px 10px #888888;
+  }
 
-.pastExperienceParagraphHidden,
-.missionStatementParagraphHidden,
-.educationParagraphHidden {
-  display: none;
-}
+  .pastExperienceParagraphHidden,
+  .missionStatementParagraphHidden,
+  .educationParagraphHidden {
+    display: none;
+  }
 
-.pastExperienceParagraph {
-  display: grid;
-  width: 65%;
-  padding-left: 27%;
-  padding-top: 8%;
-  font-size: 20px;
-  color: blue;
-  top: 83%;
-}
-.missionStatementParagraph {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  width: 20%;
-  font-size: 26px;
-  margin-top: -37%;
-}
-.missionStatementText {
-  background: -webkit-linear-gradient(
-    rgba(247, 247, 247, 1),
-    rgba(0, 212, 255, 1)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.educationParagraph {
-  font-size: 20px;
-  color: blue;
-}
+  .pastExperienceParagraph {
+    display: grid;
+    /* position: absolute; */
+    width: 65%;
+    padding-left: 27%;
+    padding-top: 8%;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    top: 83%;
+  }
+  .pasExperienceText {
+    margin-top: 26%;
+  }
 
-.onHoverNav {
-  background-color: blue;
-  color: white;
-  border: solid;
-  border-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2%;
-  height: 16%;
-  border-radius: 5px;
-}
+  .missionStatementParagraph {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 20%;
+    font-size: 26px;
+    top: 36%;
+    position: absolute;
+  }
+  .missionStatementText {
+    background: -webkit-linear-gradient(
+      rgba(247, 247, 247, 1),
+      rgba(0, 212, 255, 1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.educationParagraph {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  align-items: center;
-  width: 20%;
-  position: absolute;
-  right: 4%;
-  top: 23%;
-}
+  .onHoverNav {
+    background-color: blue;
+    color: white;
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 16%;
+    border-radius: 5px;
+  }
 
-.columbusStateLogo {
-  width: 24%;
-}
-.osuLogo {
-  width: 35%;
-}
+  .educationParagraph {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    left: 72%;
+    top: 22%;
+  }
 
-.udacityLogo {
-  width: 25%;
-}
+  .columbusStateLogo {
+    width: 20%;
+  }
+  .osuLogo {
+    width: 37%;
+  }
 
-.skillsChartDiv {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  width: 75%;
-  padding-left: 22.5%;
-  margin-top: -3%;
-}
+  .udacityLogo {
+    width: 23%;
+  }
 
-.funAPIs {
-  display: grid;
-  width: 20%;
-  font-size: 34px;
-  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.chuckNorrisAPI {
-  text-align: center;
-}
+  .skillsChartDiv {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    width: 75%;
+    padding-left: 22.5%;
+    margin-top: -5%;
+  }
 
-.chuckNorrisButton,
-.gitHubButton {
-  font-size: 20px;
-  border-radius: 3px;
-  background-color: whitesmoke;
-}
+  .funAPIs {
+    display: grid;
+    width: 20%;
+    font-size: 34px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .chuckNorrisAPI {
+    text-align: center;
+  }
 
-.funAPIs {
-  text-align: center;
-  font-size: 34px;
-  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .chuckNorrisButton,
+  .gitHubButton {
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: whitesmoke;
+  }
 
-.chuckNorrisAPI,
-.gitHubAPI,
-.footballAPI {
-  text-align: center;
-  font-size: 30px;
-  background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.chuckNorrisJokeSection,
-.gitHubRepoSection {
-  display: grid;
-  width: 20%;
-  padding-top: 2%;
-  font-size: 26px;
-  color: white;
-}
+  .funAPIs {
+    text-align: center;
+    font-size: 34px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.footballSection {
-  margin-top: -4%;
-}
-.footballAPIandButton {
-  display: grid;
-  width: 20%;
-  padding-top: 2%;
-  font-size: 26px;
-  color: white;
-}
-.footballAPI {
-  text-align: center;
-  font-size: 30px;
-}
+  .chuckNorrisAPI,
+  .gitHubAPI,
+  .footballAPI,
+  .censusAPI {
+    text-align: center;
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .chuckNorrisJokeSection,
+  .gitHubRepoSection {
+    display: grid;
+    width: 20%;
+    padding-top: 2%;
+    font-size: 26px;
+    color: white;
+  }
 
-.footballButton {
-  font-size: 20px;
-  border-radius: 3px;
-  margin-bottom: 4%;
-  background-color: whitesmoke;
-}
+  .footballSection {
+    margin-top: -4%;
+  }
+  .footballAPIandButton,
+  .censusAPIandButton {
+    display: grid;
+    width: 20%;
+    padding-top: 2%;
+    font-size: 26px;
+    color: white;
+  }
+  .footballAPI {
+    text-align: center;
+    font-size: 30px;
+  }
 
-.footballDataHidden {
-  display: none;
-}
+  .footballButton,
+  .censusButton {
+    font-size: 20px;
+    border-radius: 3px;
+    margin-bottom: 4%;
+    background-color: whitesmoke;
+  }
 
-.footballData {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: left;
-  background: grey;
-  width: 102%;
-  margin-left: -1%;
-  padding-left: 2%;
-}
-.moajaveIMGDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mojaveIMG {
-  border-radius: 15px;
-  box-shadow: 5px 5px;
+  .footballDataHidden,
+  .censusDataHidden {
+    visibility: hidden;
+  }
+
+  .footballData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: left;
+    background: grey;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: -1%;
+    padding-left: 2%;
+  }
+
+  .censusData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    justify-items: center;
+    margin-left: 25%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .imagesDiv {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    width: 69%;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+
+  .mojaveIMG {
+    border-radius: 15px 0px 0px 15px;
+    width: 84%;
+    position: absolute;
+    top: 17%;
+    left: 26%;
+    z-index: -5;
+  }
+
+  .roadIMG {
+    border-radius: 0px 0px 15px 15px;
+    width: 100%;
+  }
 }

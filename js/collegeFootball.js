@@ -27,7 +27,7 @@ function showFootballData() {
   if (footballData.classList.contains("footballDataHidden")) {
     footballData.classList.remove("footballDataHidden");
     footballData.classList.add("footballData");
-    footballData.classList.add("animated", "fadeInUp");
+    footballData.classList.add("animated", "bounceInBig");
   } else {
     footballData.classList.remove("footballData");
     footballData.classList.add("footballDataHidden");
