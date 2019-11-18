@@ -2,8 +2,8 @@ function showCensusData() {
   const getData = document.getElementById("censusData");
   if (getData.classList.contains("censusDataHidden")) {
     getData.classList.remove("censusDataHidden");
-    getData.classList.add("censusData");
     getData.classList.add("animated", "fadeInDownBig");
+    getData.classList.add("censusData");
   } else {
     getData.classList.remove("censusData");
     getData.classList.add("censusDataHidden");

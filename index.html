@@ -21,8 +21,16 @@
       <header>
         <div class="topText">
           <p id="day" class="day"></p>
-          <p id="time" class="time"></p>
-          Hi, I'm Don and I'm looking for work as a front end developer.
+          <p>
+            <p class="temp"></p>
+            <p class="location"></p>
+           <!-- It's currently <span id="temp"></span> in
+            <span id="location"></span>.
+            <br />
+            <br />
+           -->
+            Hi, I'm Don and I'm looking for work as a front end developer.
+          </p>
         </div>
       </header>
       <nav>
@@ -45,10 +53,46 @@
         </p>
       </nav>
     </div>
+    <main>
+    <section
+    id="pastExperienceParagraph"
+    class="pastExperienceParagraphHidden"
+  >
+    <p class="pastExperienceText">
+     
+      Hello,
+      <br />
+      Hope all is well.
+      <br />
+      If you are reading this, I have probably sent you my resume. I would
+      like to thank your for your time to consider me as a candidate. I have
+      three years experience building websites with progressive skills
+      gained along the way. Previously, I have worked in labs, a pharmacy, a
+      zoo, and the Sacramento county government. I am progressing my career
+      daily and am looking for the next challenge.
+    </p>
+    <p class="pastExperienceText">
+      I would like to consider this site as a demonstration of what I can
+      help build for you and your orginization. This site's code can be
+      found on GitHub if you click the API button on the left side of the
+      screen. It is built with custom HTML5, CSS and some JavaScript ES6
+      functions. I will be adding a React site which will be over the top
+      for what the content is, but it will demonstrate my ability. Also, I
+      have been learning Swift for the past three months and am looking to
+      add my first app to the App store in January 2020. Please see my next
+      six months goals shown in the chart below. I hope to get to work with
+      you someday!
+      <br />
+      Kind Regards,
+      <br />
+      Don
+    </p>
+    <img src="img/mojave.jpg" id="mojaveIMG" class="mojaveIMG" />
+  </section>
     <section class="skillsChartDiv">
       <canvas id="skillsChart" class="skillsChart"></canvas>
     </section>
-    <main>
+   
       <aside
         id="missionStatementParagraph"
         class="missionStatementParagraphHidden"
@@ -62,40 +106,99 @@
       </aside>
       <section id="educationParagraph" class="educationParagraphHidden">
         <img src="img/columbusStateLogo.jpg" class="columbusStateLogo" />
-        <p>Associates of Arts</p>
+        <p class="degreeText">Associates of Arts</p>
         <img src="img/osuLogo.png" class="osuLogo" />
-        <p>Bachelor of Science</p>
+        <p class="degreeText">Bachelor of Science</p>
         <img src="img/udacityLogo.jpg" class="udacityLogo" />
-        <p>Front End Bootcamp</p>
+        <p class="degreeText">Front End Bootcamp</p>
       </section>
-      <section
-        id="pastExperienceParagraph"
-        class="pastExperienceParagraphHidden"
-      >
-        <p class="pastExperienceWork">
-          I am dedicated to always be reviewing and learning new skills,
-          languages and ideas. I strive to deliver above what is expected and
-          use that knowlege to teach others what may be useful in their
-          educational and career pursuits. I am dedicated to always be reviewing
-          and learning new skills, languages and ideas. I strive to deliver
-          above what is expected and use that knowlege to teach others what may
-          be useful in their educational and career pursuits.
-        </p>
-        <p class="pastExperienceAbout">
-          I am dedicated to always be reviewing and learning new skills,
-          languages and ideas. I strive to deliver above what is expected and
-          use that knowlege to teach others what may be useful in their
-          educational and career pursuits. I am dedicated to always be reviewing
-          and learning new skills, languages and ideas. I strive to deliver
-          above what is expected and use that knowlege to teach others what may
-          be useful in their educational and career pursuits.
-        </p>
 
-        <div class="imagesDiv">
-          <img src="img/mojave.jpg" id="mojaveIMG" class="mojaveIMG" />
+      <section class="barChartContainer">
+        <h5 class="goalsTitle">Goals</h5>
+        <canvas id="" class="barChart"></canvas>
+      </section>
+
+      <section class="cardsSection">
+        <div
+          class="flip-container"
+          ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <p>HTML
+                <br>
+                Progress
+              </p>
+            
+            </div>
+            <div class="back">
+              <p>As I started to code my first line of HTML back in 2016,
+                I thought this was going to be an easy journey. I was wrong.
+                I severely underestimated the importance of creating a solid
+                HTML backbone as the CSS and JavaScript which I didn't understand yet
+                would be so dependent on the HTML layout. Each project I start,
+                I put more thought into how this will be layed out for a smoother process
+                in later stages of the project.
+              </p>
+              
+            </div>
+          </div>
         </div>
-      </section>
+        <div
+        class="flip-container"
+        ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <p>CSS
+              <br>
+              Progress
+            </p>
+          
+          </div>
+          <div class="back">
+            <p>
+              CSS in my opinion is just as much an art as a technical skill.
+              It really is a never ending journey to perfect the way elements look
+              on the page. After learning the basics, I started to use CSS animation and still do
+              in most of my projects. I prefer CSS Animate but am comfortable with other libraries.
+              I learned Bootstrap but quickly realized that it is very limiting as you have to work within
+              the framework. I then started to learn preprocessors Sass and Less. I prefer Less as it's JavaScript based.
+              I can implement CSS animations natively like these flip boxes, but prefer to handle everything
+              with JavaScript to separate concerns. One of my goals is to take on D3.js in 2020 to increase
+              my page visulizations.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div
+      class="flip-container"
+      ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <p>JavaScript
+            <br>
+            Progress
+          </p>
+        
+        </div>
+        <div class="back">
+          <p>
+            JavaScript for me was not easy to pick up. It took about a year of solid practice and I still
+            feel like I only know the basics to get things done. I'm unable to write a program that is worthy to be published in the 
+            language. One of the toughest things for me was being able to figure out where to start. It's a completely
+            different thought process than what I was used to. Then the next challenging part of picking up JavaScript was figuring
+            out the MVC model and how it worked with the DOM and CSS concurrently. I feel much much more confident in JavaScript after 
+            a few years of practicing and reading You Don't Know JS. Then learning ES6 was a challenge including to use Filter, Map, Reduce, arrow functions, 
+            async, import-export modules, etc. This was needed to gain a solid foundation for API calls and React. I will never master this language,
+             but since it was my first programming language I will always be striving to improve on it.
+          </p>
+          
+        </div>
+      </div>
+    </div>
 
+      </section>
+      <section class="apiSection">
       <h3 class="funAPIs">Fun APIs</h3>
       <section id="gitHubRepoSection" class="gitHubRepoSection">
         <h3 class="gitHubAPI">My GitHub Repos</h3>
@@ -109,11 +212,7 @@
         </button>
         <p id="fact"></p>
       </section>
-      <div id="weather">
-        <div id="description"></div>
-        <h1 id="temp"></h1>
-        <div id="location"></div>
-      </div>
+
       <section id="footballSection" class="footballSection">
         <div class="footballAPIandButton">
           <h4 class="footballAPI">
@@ -143,6 +242,7 @@
           </button>
         </div>
       </section>
+
       <div id="censusData" class="censusDataHidden"></div>
     </main>
     <script src="js/time.js"></script>
@@ -152,5 +252,6 @@
     <script src="js/collegeFootball.js"></script>
     <script src="js/census.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/goalsChart.js"></script>
   </body>
 </html>

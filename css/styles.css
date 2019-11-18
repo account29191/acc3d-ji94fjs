@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1199px) {
+  html,
+  body {
+    display: none;
+  }
+}
 @media only screen and (min-width: 1280px) {
   body {
     background: rgb(2, 0, 36);
@@ -45,17 +51,28 @@
 
   .pastExperienceParagraph {
     display: grid;
-    /* position: absolute; */
     width: 65%;
-    padding-left: 27%;
-    padding-top: 8%;
+    padding-left: 25.5%;
     font-size: 24px;
     color: white;
     font-weight: bold;
-    top: 83%;
+    position: absolute;
   }
-  .pasExperienceText {
-    margin-top: 26%;
+  .pastExperienceText {
+    color: black;
+    background-color: white;
+    opacity: 0.6;
+    padding: 1%;
+    width: 79%;
+    border-radius: 11px;
+  }
+
+  .mojaveIMG {
+    border-radius: 15px 0px 0px 15px;
+    width: 84%;
+    position: absolute;
+    left: 26%;
+    z-index: -5;
   }
 
   .missionStatementParagraph {
@@ -77,7 +94,7 @@
   }
 
   .onHoverNav {
-    background-color: blue;
+    background-color: rgb(38, 77, 228);
     color: white;
     border: solid;
     border-color: black;
@@ -97,7 +114,7 @@
     justify-items: center;
     align-items: center;
     left: 72%;
-    top: 22%;
+    top: 24%;
   }
 
   .columbusStateLogo {
@@ -109,6 +126,11 @@
 
   .udacityLogo {
     width: 23%;
+  }
+
+  .degreeText {
+    color: white;
+    font-size: 18px;
   }
 
   .skillsChartDiv {
@@ -192,7 +214,7 @@
 
   .footballDataHidden,
   .censusDataHidden {
-    visibility: hidden;
+    display: none;
   }
 
   .footballData {
@@ -225,17 +247,88 @@
     margin-left: 25%;
   }
 
-  .mojaveIMG {
-    border-radius: 15px 0px 0px 15px;
-    width: 84%;
-    position: absolute;
-    top: 17%;
-    left: 26%;
-    z-index: -5;
-  }
-
   .roadIMG {
     border-radius: 0px 0px 15px 15px;
     width: 100%;
   }
+}
+
+/*Stacked bar*/
+
+.goalsTitle {
+  text-align: center;
+  font-size: 36px;
+  margin-left: 4%;
+  margin-bottom: 1%;
+  color: lightslategray;
+}
+
+.barChartContainer {
+  background-color: transparent;
+  /* position: absolute; */
+  width: 80%;
+  margin-top: 17%;
+  margin-left: 22%;
+}
+
+/* Card Flip Section */
+
+.cardsSection {
+  display: inline-block;
+  width: 21%;
+  margin-top: -59%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 275px;
+  height: 275px;
+  margin-bottom: 4%;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  background-color: rgb(38, 77, 228);
+  color: white;
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  background: red;
+  color: white;
 }
