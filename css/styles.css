@@ -1,10 +1,15 @@
-@media only screen and (max-width: 1199px) {
-  html,
-  body {
+@media only screen and (max-width: 1279px) {
+  .largeDesktop,
+  .headerAndNavWrapper,
+  main {
     display: none;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) and (max-width: 1300px) {
+  .mobile,
+  .largeDesktop {
+    display: none;
+  }
   body {
     background: rgb(2, 0, 36);
     background: linear-gradient(
@@ -13,6 +18,10 @@
       rgba(247, 247, 247, 1) 25%,
       rgba(0, 212, 255, 1) 100%
     );
+  }
+  .cardText {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
   .headerAndNavWrapper {
     display: grid;
@@ -57,6 +66,8 @@
     color: white;
     font-weight: bold;
     position: absolute;
+    z-index: 0;
+    margin-top: -8%;
   }
   .pastExperienceText {
     color: black;
@@ -64,6 +75,7 @@
     opacity: 0.6;
     padding: 1%;
     width: 79%;
+    font-size: 21px;
     border-radius: 11px;
   }
 
@@ -251,90 +263,790 @@
     border-radius: 0px 0px 15px 15px;
     width: 100%;
   }
+
+  /*Stacked bar*/
+
+  .goalsTitle {
+    text-align: center;
+    font-size: 36px;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    color: lightslategray;
+  }
+
+  .barChartContainer {
+    background-color: transparent;
+    /* position: absolute; */
+    width: 80%;
+    margin-top: 17%;
+    margin-left: 22%;
+  }
+
+  /* Card Flip Section */
+
+  .cardsSection {
+    display: flex;
+    width: 21%;
+    margin-top: -59%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  /* entire container, keeps perspective */
+  .flip-container {
+    perspective: 1000px;
+  }
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container,
+  .front,
+  .back {
+    width: 275px;
+    height: 275px;
+    margin-bottom: 4%;
+    border-radius: 5px;
+  }
+
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+  }
+
+  /* hide back of pane during swap */
+  .front,
+  .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: rgb(38, 77, 228);
+    color: white;
+  }
+
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+    background: red;
+    color: white;
+  }
+  .frontCardText {
+    margin-top: 35%;
+    text-align: center;
+    font-size: 34px;
+  }
 }
 
-/*Stacked bar*/
+@media only screen and (min-width: 1301px) and (max-width: 1599px) {
+  .mobile,
+  .largeDesktop {
+    display: none;
+  }
+  body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(247, 247, 247, 1) 25%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  .cardText {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  .headerAndNavWrapper {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .topText {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
 
-.goalsTitle {
-  text-align: center;
-  font-size: 36px;
-  margin-left: 4%;
-  margin-bottom: 1%;
-  color: lightslategray;
+  .pastExperience,
+  .missionStatement,
+  .education {
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 16%;
+    border-radius: 5px;
+    box-shadow: 5px 10px #888888;
+  }
+
+  .pastExperienceParagraphHidden,
+  .missionStatementParagraphHidden,
+  .educationParagraphHidden {
+    display: none;
+  }
+
+  .pastExperienceParagraph {
+    display: grid;
+    width: 65%;
+    padding-left: 25.5%;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    z-index: 0;
+    margin-top: -2%;
+  }
+  .pastExperienceText {
+    color: black;
+    background-color: white;
+    opacity: 0.6;
+    padding: 1%;
+    width: 79%;
+    font-size: 24px;
+    border-radius: 11px;
+  }
+
+  .mojaveIMG {
+    border-radius: 15px 0px 0px 15px;
+    width: 84%;
+    position: absolute;
+    left: 26%;
+    z-index: -5;
+  }
+
+  .missionStatementParagraph {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 20%;
+    font-size: 26px;
+    top: 36%;
+    position: absolute;
+  }
+  .missionStatementText {
+    background: -webkit-linear-gradient(
+      rgba(247, 247, 247, 1),
+      rgba(0, 212, 255, 1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .onHoverNav {
+    background-color: rgb(38, 77, 228);
+    color: white;
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 16%;
+    border-radius: 5px;
+  }
+
+  .educationParagraph {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    left: 72%;
+    top: 27%;
+  }
+
+  .columbusStateLogo {
+    width: 20%;
+  }
+  .osuLogo {
+    width: 37%;
+  }
+
+  .udacityLogo {
+    width: 23%;
+  }
+
+  .degreeText {
+    color: white;
+    font-size: 18px;
+  }
+
+  .skillsChartDiv {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    width: 75%;
+    padding-left: 22.5%;
+    margin-top: -5%;
+  }
+
+  .funAPIs {
+    display: grid;
+    width: 20%;
+    font-size: 34px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .chuckNorrisAPI {
+    text-align: center;
+  }
+
+  .chuckNorrisButton,
+  .gitHubButton {
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: whitesmoke;
+  }
+
+  .funAPIs {
+    text-align: center;
+    font-size: 34px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .chuckNorrisAPI,
+  .gitHubAPI,
+  .footballAPI,
+  .censusAPI {
+    text-align: center;
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .chuckNorrisJokeSection,
+  .gitHubRepoSection {
+    display: grid;
+    width: 20%;
+    padding-top: 2%;
+    font-size: 26px;
+    color: white;
+  }
+
+  .footballSection {
+    margin-top: -4%;
+  }
+  .footballAPIandButton,
+  .censusAPIandButton {
+    display: grid;
+    width: 20%;
+    padding-top: 2%;
+    font-size: 26px;
+    color: white;
+  }
+  .footballAPI {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .footballButton,
+  .censusButton {
+    font-size: 20px;
+    border-radius: 3px;
+    margin-bottom: 4%;
+    background-color: whitesmoke;
+  }
+
+  .footballDataHidden,
+  .censusDataHidden {
+    display: none;
+  }
+
+  .footballData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: left;
+    background: grey;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: -1%;
+    padding-left: 2%;
+  }
+
+  .censusData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    justify-items: center;
+    margin-left: 25%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .imagesDiv {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    width: 69%;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+
+  .roadIMG {
+    border-radius: 0px 0px 15px 15px;
+    width: 100%;
+  }
+
+  /*Stacked bar*/
+
+  .goalsTitle {
+    text-align: center;
+    font-size: 36px;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    color: lightslategray;
+  }
+
+  .barChartContainer {
+    background-color: transparent;
+    /* position: absolute; */
+    width: 80%;
+    margin-top: 17%;
+    margin-left: 22%;
+  }
+
+  /* Card Flip Section */
+
+  .cardsSection {
+    display: flex;
+    width: 21%;
+    margin-top: -59%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  /* entire container, keeps perspective */
+  .flip-container {
+    perspective: 1000px;
+  }
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container,
+  .front,
+  .back {
+    width: 275px;
+    height: 275px;
+    margin-bottom: 4%;
+    border-radius: 5px;
+  }
+
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+  }
+
+  /* hide back of pane during swap */
+  .front,
+  .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: rgb(38, 77, 228);
+    color: white;
+  }
+
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+    background: red;
+    color: white;
+  }
+  .frontCardText {
+    margin-top: 35%;
+    text-align: center;
+    font-size: 34px;
+  }
 }
 
-.barChartContainer {
-  background-color: transparent;
-  /* position: absolute; */
-  width: 80%;
-  margin-top: 17%;
-  margin-left: 22%;
+@media only screen and (min-width: 1600px) and (max-width: 1680px) {
+  .mobile,
+  .largeDesktop {
+    display: none;
+  }
+  body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(247, 247, 247, 1) 25%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  .cardText {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  .headerAndNavWrapper {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .topText {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .pastExperience,
+  .missionStatement,
+  .education {
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 16%;
+    border-radius: 5px;
+    box-shadow: 5px 10px #888888;
+  }
+
+  .pastExperienceParagraphHidden,
+  .missionStatementParagraphHidden,
+  .educationParagraphHidden {
+    display: none;
+  }
+
+  .pastExperienceParagraph {
+    display: grid;
+    width: 65%;
+    padding-left: 25.5%;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    z-index: 0;
+    margin-top: -2%;
+  }
+  .pastExperienceText {
+    color: black;
+    background-color: white;
+    opacity: 0.6;
+    padding: 1%;
+    width: 79%;
+    font-size: 28px;
+    border-radius: 11px;
+  }
+
+  .mojaveIMG {
+    border-radius: 15px 0px 0px 15px;
+    width: 84%;
+    position: absolute;
+    left: 26%;
+    z-index: -5;
+  }
+
+  .missionStatementParagraph {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 20%;
+    font-size: 26px;
+    top: 36%;
+    position: absolute;
+  }
+  .missionStatementText {
+    background: -webkit-linear-gradient(
+      rgba(247, 247, 247, 1),
+      rgba(0, 212, 255, 1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .onHoverNav {
+    background-color: rgb(38, 77, 228);
+    color: white;
+    border: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 16%;
+    border-radius: 5px;
+  }
+
+  .educationParagraph {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    left: 72%;
+    top: 22%;
+  }
+
+  .columbusStateLogo {
+    width: 20%;
+  }
+  .osuLogo {
+    width: 37%;
+  }
+
+  .udacityLogo {
+    width: 23%;
+  }
+
+  .degreeText {
+    color: white;
+    font-size: 18px;
+  }
+
+  .skillsChartDiv {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    width: 75%;
+    padding-left: 22.5%;
+    margin-top: -5%;
+  }
+
+  .funAPIs {
+    display: grid;
+    width: 20%;
+    font-size: 34px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .chuckNorrisAPI {
+    text-align: center;
+  }
+
+  .chuckNorrisButton,
+  .gitHubButton {
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: whitesmoke;
+  }
+
+  .funAPIs {
+    text-align: center;
+    font-size: 34px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .chuckNorrisAPI,
+  .gitHubAPI,
+  .footballAPI,
+  .censusAPI {
+    text-align: center;
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f7f7f7, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .chuckNorrisJokeSection,
+  .gitHubRepoSection {
+    display: grid;
+    width: 20%;
+    padding-top: 2%;
+    font-size: 26px;
+    color: white;
+  }
+
+  .footballSection {
+    margin-top: -4%;
+  }
+  .footballAPIandButton,
+  .censusAPIandButton {
+    display: grid;
+    width: 20%;
+    padding-top: 2%;
+    font-size: 26px;
+    color: white;
+  }
+  .footballAPI {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .footballButton,
+  .censusButton {
+    font-size: 20px;
+    border-radius: 3px;
+    margin-bottom: 4%;
+    background-color: whitesmoke;
+  }
+
+  .footballDataHidden,
+  .censusDataHidden {
+    display: none;
+  }
+
+  .footballData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: left;
+    background: grey;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: -1%;
+    padding-left: 2%;
+  }
+
+  .censusData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    justify-items: center;
+    margin-left: 25%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .imagesDiv {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    width: 69%;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+
+  .roadIMG {
+    border-radius: 0px 0px 15px 15px;
+    width: 100%;
+  }
+
+  /*Stacked bar*/
+
+  .goalsTitle {
+    text-align: center;
+    font-size: 36px;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    color: lightslategray;
+  }
+
+  .barChartContainer {
+    background-color: transparent;
+    /* position: absolute; */
+    width: 80%;
+    margin-top: 17%;
+    margin-left: 22%;
+  }
+
+  /* Card Flip Section */
+
+  .cardsSection {
+    display: flex;
+    width: 21%;
+    margin-top: -59%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  /* entire container, keeps perspective */
+  .flip-container {
+    perspective: 1000px;
+  }
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container,
+  .front,
+  .back {
+    width: 275px;
+    height: 275px;
+    margin-bottom: 4%;
+    border-radius: 5px;
+  }
+
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+  }
+
+  /* hide back of pane during swap */
+  .front,
+  .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: rgb(38, 77, 228);
+    color: white;
+  }
+
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+    background: red;
+    color: white;
+  }
+  .frontCardText {
+    margin-top: 35%;
+    text-align: center;
+    font-size: 34px;
+  }
 }
 
-/* Card Flip Section */
-
-.cardsSection {
-  display: flex;
-  width: 21%;
-  margin-top: -59%;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000px;
-}
-/* flip the pane when hovered */
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
-  width: 275px;
-  height: 275px;
-  margin-bottom: 4%;
-  border-radius: 5px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front,
-.back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-  background-color: rgb(38, 77, 228);
-  color: white;
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-  background: red;
-  color: white;
-}
-.frontCardText {
-  margin-top: 35%;
-  text-align: center;
-  font-size: 34px;
+@media only screen and (min-width: 1681px) {
+  .mobile,
+  .headerAndNavWrapper,
+  main {
+    display: none;
+  }
 }
